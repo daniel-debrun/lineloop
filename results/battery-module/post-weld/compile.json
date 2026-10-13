@@ -1,0 +1,22 @@
+{
+ "trees": 200,
+ "depth": 8,
+ "features": 183,
+ "base_margin": -5.144080476108199,
+ "onnx_bytes": 672556,
+ "feature_names": "183 names (see runs/)",
+ "signal": {
+  "name": "weld",
+  "shape": [
+   24,
+   3,
+   500
+  ],
+  "bytes_per_part": 144000,
+  "features": 27
+ },
+ "max_abs_diff_ort-cpu": 3.8743019104003906e-07,
+ "share_above_1e-4_ort-cpu": 0.0,
+ "max_abs_diff_trt": 3.725290298461914e-07,
+ "share_above_1e-4_trt": 0.0
+}

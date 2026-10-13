@@ -1,0 +1,238 @@
+{
+ "parts": 1183747,
+ "failures": 6879,
+ "features": 1287,
+ "folds": 5,
+ "seed": 0,
+ "split": "time",
+ "scored_parts": 986455,
+ "scored_failures": 5842,
+ "rounds": 1300,
+ "bags": 1,
+ "device": "cuda",
+ "params": {
+  "objective": "binary:logistic",
+  "eval_metric": "auc",
+  "tree_method": "hist",
+  "eta": 0.02,
+  "max_depth": 8,
+  "min_child_weight": 2,
+  "subsample": 0.85,
+  "colsample_bytree": 0.4,
+  "colsample_bylevel": 0.8,
+  "max_bin": 256,
+  "base_score": 0.0058,
+  "seed": 0,
+  "device": "cuda"
+ },
+ "auc": 0.8654662854616612,
+ "mcc_best": 0.2627701999451057,
+ "threshold": 0.15475806593894958,
+ "mcc_best_ci95": [
+  0.2498093930585783,
+  0.27409598741840796
+ ],
+ "mcc_honest": 0.16889450370135917,
+ "fold_thresholds": [
+  0.7634181976318359,
+  0.06984244287014008,
+  0.13516110181808472,
+  0.15475806593894958
+ ],
+ "confusion": {
+  "tp": 1061,
+  "fp": 1669,
+  "fn": 4781,
+  "tn": 978944
+ },
+ "per_fold": [
+  {
+   "fold": 1,
+   "n": 197291,
+   "pos": 1462,
+   "auc": 0.8698831364774479,
+   "mcc_best": 0.26894823670794027,
+   "train_s": 8.74,
+   "predict_s": 0.505
+  },
+  {
+   "fold": 2,
+   "n": 197291,
+   "pos": 1881,
+   "auc": 0.8677411084658734,
+   "mcc_best": 0.38462795517068216,
+   "train_s": 13.84,
+   "predict_s": 0.551
+  },
+  {
+   "fold": 3,
+   "n": 197291,
+   "pos": 1006,
+   "auc": 0.8357568221361896,
+   "mcc_best": 0.31523286016369945,
+   "train_s": 18.16,
+   "predict_s": 0.558
+  },
+  {
+   "fold": 4,
+   "n": 197291,
+   "pos": 746,
+   "auc": 0.9012173364578182,
+   "mcc_best": 0.36262254703174845,
+   "train_s": 27.95,
+   "predict_s": 0.552
+  },
+  {
+   "fold": 5,
+   "n": 197291,
+   "pos": 747,
+   "auc": 0.8411592819230902,
+   "mcc_best": 0.17067655333724407,
+   "train_s": 29.37,
+   "predict_s": 0.543
+  }
+ ],
+ "train_s_total": 98.1,
+ "importance_top30": [
+  [
+   "S_next_id",
+   0.1351
+  ],
+  [
+   "I_next_gap",
+   0.0878
+  ],
+  [
+   "I_next_end_gap",
+   0.0467
+  ],
+  [
+   "S_next_same_path",
+   0.041
+  ],
+  [
+   "E_next_id",
+   0.0217
+  ],
+  [
+   "sig_n",
+   0.0217
+  ],
+  [
+   "L3_S32_span",
+   0.0177
+  ],
+  [
+   "st_L3_S33_grp_ysum",
+   0.0134
+  ],
+  [
+   "L3_S32_t0",
+   0.0111
+  ],
+  [
+   "I_prev_end_gap",
+   0.0104
+  ],
+  [
+   "L3_n",
+   0.0091
+  ],
+  [
+   "st_L3_S37_grp_ysum",
+   0.0085
+  ],
+  [
+   "L3_S33_F3865",
+   0.0075
+  ],
+  [
+   "st_L3_S30_grp_ysum",
+   0.0068
+  ],
+  [
+   "st_L3_S34_grp_ysum",
+   0.0067
+  ],
+  [
+   "S_next_ysum",
+   0.0064
+  ],
+  [
+   "end_grp_ysum",
+   0.0061
+  ],
+  [
+   "I_prev_gap",
+   0.0061
+  ],
+  [
+   "S_prev_id",
+   0.0059
+  ],
+  [
+   "L1_S24_F1846",
+   0.0055
+  ],
+  [
+   "L1_S24_F1723",
+   0.0054
+  ],
+  [
+   "E_prev_id",
+   0.0052
+  ],
+  [
+   "L3_S33_F3857",
+   0.0052
+  ],
+  [
+   "L3_S32_F3850",
+   0.0049
+  ],
+  [
+   "S_next1_y",
+   0.0048
+  ],
+  [
+   "L3_S33_F3859",
+   0.0047
+  ],
+  [
+   "num_grp_ysum",
+   0.0046
+  ],
+  [
+   "L3_S33_rel",
+   0.0043
+  ],
+  [
+   "L3_S33_t0",
+   0.0042
+  ],
+  [
+   "st_L3_S33_n",
+   0.0042
+  ]
+ ],
+ "recipe": "live",
+ "sample": 1.0,
+ "load_s": 0.79,
+ "features_s": 69.4,
+ "frames": "cudf",
+ "line": "bosch",
+ "checkpoint": null,
+ "causal": true,
+ "numeric": true,
+ "versions": {
+  "xgboost": "3.4.1",
+  "cudf": "25.12.0",
+  "pandas": "2.3.3",
+  "numpy": "2.2.6",
+  "cuopt": "25.12.0",
+  "warp-lang": "1.18.0",
+  "tensorrt": "11.4.0.106",
+  "highspy": "1.15.1",
+  "gpu": "NVIDIA GeForce RTX 5090"
+ }
+}

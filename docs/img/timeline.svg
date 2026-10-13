@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 392" width="1000" height="392" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9a9a9a"/></marker></defs>
+<rect width="1000" height="392" fill="#ffffff"/>
+<text x="20" y="28" font-size="11" fill="#000000" font-weight="600" text-anchor="start">ONE TIMELINE, THREE WINDOWS: NOTHING IS TUNED ON THE WEEKS IT IS JUDGED ON</text>
+<rect x="270" y="42" width="236" height="66" rx="8" fill="#f6f8fa" stroke="#c9d1d9" stroke-width="1"/>
+<text x="282" y="64" font-size="13.5" fill="#000000" font-weight="700" text-anchor="start">1 · train</text>
+<text x="282" y="82" font-size="11" fill="#000000" font-weight="400" text-anchor="start">the past: the model learns here</text>
+<text x="282" y="99" font-size="10.5" fill="#000000" font-weight="400" text-anchor="start">Bosch 828,341 parts · battery 63,010</text>
+<rect x="514" y="42" width="236" height="66" rx="8" fill="#f6f8fa" stroke="#c9d1d9" stroke-width="1"/>
+<text x="526" y="64" font-size="13.5" fill="#000000" font-weight="700" text-anchor="start">2 · calibrate</text>
+<text x="526" y="82" font-size="11" fill="#000000" font-weight="400" text-anchor="start">the plan is chosen here</text>
+<text x="526" y="99" font-size="10.5" fill="#000000" font-weight="400" text-anchor="start">Bosch 177,480 parts · battery 13,494</text>
+<text x="510.0" y="75" font-size="14" fill="#000000" font-weight="400" text-anchor="middle">→</text>
+<rect x="758" y="42" width="236" height="66" rx="8" fill="#f6f8fa" stroke="#c9d1d9" stroke-width="1"/>
+<text x="770" y="64" font-size="13.5" fill="#000000" font-weight="700" text-anchor="start">3 · hold-out</text>
+<text x="770" y="82" font-size="11" fill="#000000" font-weight="400" text-anchor="start">everything is judged here</text>
+<text x="770" y="99" font-size="10.5" fill="#000000" font-weight="400" text-anchor="start">Bosch 177,344 parts · battery 13,517</text>
+<text x="754.0" y="75" font-size="14" fill="#000000" font-weight="400" text-anchor="middle">→</text>
+<text x="20" y="64" font-size="12" fill="#000000" font-weight="400" text-anchor="start">time →</text>
+<text x="20" y="82" font-size="11" fill="#000000" font-weight="400" text-anchor="start">cut at the 70 % and 85 %</text>
+<text x="20" y="99" font-size="11" fill="#000000" font-weight="400" text-anchor="start">quantiles of decision times</text>
+<text x="20" y="148" font-size="13" fill="#000000" font-weight="700" text-anchor="start">1 Predict</text>
+<text x="20" y="165" font-size="10.5" fill="#000000" font-weight="400" text-anchor="start" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">$ quality fit --until t1</text>
+<rect x="270" y="136" width="236" height="32" rx="6" fill="#d6e6fa" stroke="#2a78d6" stroke-width="1"/>
+<text x="388.0" y="157" font-size="11.5" fill="#000000" font-weight="600" text-anchor="middle">trains</text>
+<rect x="514" y="136" width="236" height="32" rx="6" fill="#d6e6fa" stroke="#2a78d6" stroke-width="1"/>
+<text x="632.0" y="157" font-size="11.5" fill="#000000" font-weight="600" text-anchor="middle">checked forward</text>
+<rect x="758" y="136" width="236" height="32" rx="6" fill="#d6e6fa" stroke="#2a78d6" stroke-width="1"/>
+<text x="876.0" y="157" font-size="11.5" fill="#000000" font-weight="600" text-anchor="middle">checked forward</text>
+<text x="20" y="198" font-size="13" fill="#000000" font-weight="700" text-anchor="start">2 Score live</text>
+<text x="20" y="215" font-size="10.5" fill="#000000" font-weight="400" text-anchor="start" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">$ edge replay --t-from t1</text>
+<rect x="270" y="186" width="236" height="32" rx="6" fill="#f6f8fa" stroke="#c9d1d9" stroke-width="1"/>
+<text x="388.0" y="207" font-size="11.5" fill="#000000" font-weight="400" text-anchor="middle">history loaded</text>
+<rect x="514" y="186" width="236" height="32" rx="6" fill="#d6e6fa" stroke="#2a78d6" stroke-width="1"/>
+<text x="632.0" y="207" font-size="11.5" fill="#000000" font-weight="600" text-anchor="middle">scores live</text>
+<rect x="758" y="186" width="236" height="32" rx="6" fill="#d6e6fa" stroke="#2a78d6" stroke-width="1"/>
+<text x="876.0" y="207" font-size="11.5" fill="#000000" font-weight="600" text-anchor="middle">scores live</text>
+<text x="20" y="248" font-size="13" fill="#000000" font-weight="700" text-anchor="start">3 Decide</text>
+<text x="20" y="265" font-size="10.5" fill="#000000" font-weight="400" text-anchor="start" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">$ plan --split t1,t2</text>
+<rect x="514" y="236" width="236" height="32" rx="6" fill="#d6e6fa" stroke="#2a78d6" stroke-width="1"/>
+<text x="632.0" y="257" font-size="11.5" fill="#000000" font-weight="600" text-anchor="middle">MILP + twin plan here</text>
+<rect x="758" y="236" width="236" height="32" rx="6" fill="#d6e6fa" stroke="#2a78d6" stroke-width="1"/>
+<text x="876.0" y="257" font-size="11.5" fill="#000000" font-weight="600" text-anchor="middle">plan judged</text>
+<text x="20" y="298" font-size="13" fill="#000000" font-weight="700" text-anchor="start">4 Stress-test</text>
+<text x="20" y="315" font-size="10.5" fill="#000000" font-weight="400" text-anchor="start" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">$ twin</text>
+<rect x="758" y="286" width="236" height="32" rx="6" fill="#d6e6fa" stroke="#2a78d6" stroke-width="1"/>
+<text x="876.0" y="307" font-size="11.5" fill="#000000" font-weight="600" text-anchor="middle">8,192 drawn economics</text>
+<text x="20" y="348" font-size="13" fill="#000000" font-weight="700" text-anchor="start">5 Place</text>
+<text x="20" y="365" font-size="10.5" fill="#000000" font-weight="400" text-anchor="start" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">$ place</text>
+<rect x="514" y="336" width="236" height="32" rx="6" fill="#d6e6fa" stroke="#2a78d6" stroke-width="1"/>
+<text x="632.0" y="357" font-size="11.5" fill="#000000" font-weight="600" text-anchor="middle">real decision stream</text>
+<rect x="758" y="336" width="236" height="32" rx="6" fill="#d6e6fa" stroke="#2a78d6" stroke-width="1"/>
+<text x="876.0" y="357" font-size="11.5" fill="#000000" font-weight="600" text-anchor="middle">real decision stream</text>
+<text x="20" y="384" font-size="11" fill="#000000" font-weight="400" text-anchor="start">t1 and t2 come from the data; every stage reads the same split, so a number reported on the hold-out was never used to choose anything.</text>
+</svg>

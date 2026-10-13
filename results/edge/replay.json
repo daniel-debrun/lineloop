@@ -1,0 +1,31 @@
+{
+ "model": "runs/edge/l3-entry",
+ "line": "bosch",
+ "recipe": "l3-entry",
+ "backend": "trt",
+ "t_from": 1171.0,
+ "events": 1739702,
+ "scored_parts": 354824,
+ "failures": 1412,
+ "auc": 0.8643817142502251,
+ "mcc_best": 0.1930799836695019,
+ "threshold_best": 0.005899029318243265,
+ "warm_s": 66.0351608269848,
+ "wall_s": 1049.5202136412263,
+ "ticks": 20475,
+ "tick_ms_p50": 52.63952072709799,
+ "tick_ms_p99": 118.08319883421059,
+ "parts_per_tick_p50": 37.0,
+ "events_per_s": 1657.6164778801576,
+ "versions": {
+  "xgboost": "3.4.1",
+  "cudf": "25.12.0",
+  "pandas": "2.3.3",
+  "numpy": "2.2.6",
+  "cuopt": "25.12.0",
+  "warp-lang": "1.18.0",
+  "tensorrt": "11.4.0.106",
+  "highspy": "1.15.1",
+  "gpu": "NVIDIA GeForce RTX 5090"
+ }
+}

@@ -1,0 +1,39 @@
+# The Bosch production line from the Kaggle competition "Bosch Production Line Performance" (2016).
+# 1.18 M labelled parts (and 1.18 M unlabelled test parts) over 52 stations on four lines, L0 to L3.
+# Get the data with: kaggle competitions download -c bosch-production-line-performance  (into data/bosch)
+
+name = "bosch"
+description = "Bosch production line: 4 lines, 52 stations, 2.37 M parts (Kaggle, 2016)"
+
+[data]
+format = "bosch"                  # the Kaggle wide CSVs: train_numeric, train_date, test_date (.csv or .csv.zip)
+source = "data/bosch"
+cache = "data/cache/bosch"
+# No [[segment]] tables: the bosch format reads the stations from the column names (L{line}_S{station}_...),
+# in station-number order, one segment per line: L0, L1, L2, L3.
+
+[time]
+unit_hours = 10.0                 # one unit of the Bosch clock is about 10 hours (inferred from the day and week
+                                  # cycles in the data; Bosch did not document it)
+resolution = 0.01                 # timestamps come in steps of 0.01 (about 6 minutes)
+
+[stations]
+group_min_share = 0.10            # stations at least 10 % of parts visit get "same time at this station" features
+                                  # (31 on this line)
+
+[checkpoints]
+l3-entry = "L3_S29"               # early warning: score each part as it enters line 3 (95 % of parts do)
+
+[families]                        # route blocks before line 3 that the inspection policy may treat differently
+L0a = ["L0_S0", "L0_S11"]
+L0b = ["L0_S12", "L0_S23"]
+L1 = ["L1_S24", "L1_S25"]
+L2 = ["L2_S26", "L2_S28"]
+
+[shifts]
+hours = 8
+
+[edge.l3-entry]                   # lineloop place: does this checkpoint need an edge node? (assumed figures)
+deadline_s = 360.0                # pull a part before line 3 starts on it: within a step of the line's clock
+undecided = "pass"                # an unchecked part goes into line 3, as it does today
+edge_cost_per_month = 150.0       # an edge node at the line: hardware over three years, power, upkeep

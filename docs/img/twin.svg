@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 404" width="1000" height="404" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9a9a9a"/></marker></defs>
+<rect width="1000" height="404" fill="#ffffff"/>
+<text x="20" y="28" font-size="11" fill="#000000" font-weight="600" text-anchor="start">THE TWIN: WHAT HAPPENS TO EACH PART AT THE CHECKPOINT, IN ONE SIMULATED SCENARIO</text>
+<rect x="20" y="58" width="170" height="74" rx="8" fill="#f6f8fa" stroke="#c9d1d9" stroke-width="1"/>
+<text x="34" y="82" font-size="13" fill="#000000" font-weight="700" text-anchor="start">a part arrives</text>
+<text x="34" y="100" font-size="11" fill="#000000" font-weight="400" text-anchor="start">real time, real live score,</text>
+<text x="34" y="116" font-size="11" fill="#000000" font-weight="400" text-anchor="start">real outcome (from replay)</text>
+<path d="M300,50.0 L395.0,95 L300,140.0 L205.0,95 z" fill="#ffffff" stroke="#c9d1d9" stroke-width="1"/>
+<text x="300" y="89" font-size="11" fill="#000000" font-weight="600" text-anchor="middle">score ≥ threshold for its</text>
+<text x="300" y="105" font-size="11" fill="#000000" font-weight="600" text-anchor="middle">route and shift slot?</text>
+<path d="M190,95 L204,95" stroke="#9a9a9a" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+<path d="M510,50.0 L605.0,95 L510,140.0 L415.0,95 z" fill="#ffffff" stroke="#c9d1d9" stroke-width="1"/>
+<text x="510" y="89" font-size="11" fill="#000000" font-weight="600" text-anchor="middle">an inspector on shift</text>
+<text x="510" y="105" font-size="11" fill="#000000" font-weight="600" text-anchor="middle">free within max wait?</text>
+<path d="M395,95 L414,95" stroke="#9a9a9a" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+<text x="404" y="86" font-size="10.5" fill="#000000" font-weight="400" text-anchor="middle">yes</text>
+<rect x="626" y="62" width="150" height="66" rx="8" fill="#f6f8fa" stroke="#c9d1d9" stroke-width="1"/>
+<text x="640" y="86" font-size="13" fill="#000000" font-weight="700" text-anchor="start">inspect</text>
+<text x="640" y="104" font-size="11" fill="#000000" font-weight="400" text-anchor="start">lognormal time;</text>
+<text x="640" y="119" font-size="11" fill="#000000" font-weight="400" text-anchor="start">the inspector is busy</text>
+<path d="M605,95 L624,95" stroke="#9a9a9a" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+<text x="614" y="86" font-size="10.5" fill="#000000" font-weight="400" text-anchor="middle">yes</text>
+<path d="M874,49.0 L967.0,95 L874,141.0 L781.0,95 z" fill="#ffffff" stroke="#c9d1d9" stroke-width="1"/>
+<text x="874" y="89" font-size="11" fill="#000000" font-weight="600" text-anchor="middle">defect already there,</text>
+<text x="874" y="105" font-size="11" fill="#000000" font-weight="600" text-anchor="middle">and found (detect %)?</text>
+<path d="M776,95 L780,95" stroke="#9a9a9a" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+<rect x="784" y="182" width="196" height="66" rx="8" fill="#ffffff" stroke="#2a78d6" stroke-width="1"/>
+<text x="798" y="206" font-size="13" fill="#000000" font-weight="700" text-anchor="start">caught early</text>
+<text x="798" y="224" font-size="11" fill="#000000" font-weight="400" text-anchor="start">saves its value + the work</text>
+<text x="798" y="239" font-size="11" fill="#000000" font-weight="400" text-anchor="start">after the checkpoint</text>
+<path d="M874,140 L874,180" stroke="#9a9a9a" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+<text x="882" y="164" font-size="10.5" fill="#000000" font-weight="400" text-anchor="start">yes</text>
+<rect x="204" y="182" width="470" height="66" rx="8" fill="#ffffff" stroke="#c9d1d9" stroke-width="1"/>
+<text x="218" y="206" font-size="13" fill="#000000" font-weight="700" text-anchor="start">goes on, as today</text>
+<text x="218" y="224" font-size="11" fill="#000000" font-weight="400" text-anchor="start">not flagged · bypassed (the cell was full) · missed · or its defect is made later:</text>
+<text x="218" y="239" font-size="11" fill="#000000" font-weight="400" text-anchor="start">a failing part is found at the final test, with all the line's work spent</text>
+<path d="M300,140 L300,180" stroke="#9a9a9a" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+<text x="308" y="164" font-size="10.5" fill="#000000" font-weight="400" text-anchor="start">no</text>
+<path d="M510,140 L510,180" stroke="#9a9a9a" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+<text x="518" y="164" font-size="10.5" fill="#000000" font-weight="400" text-anchor="start">no (bypass)</text>
+<path d="M830,118 L830,150 L680,150 L676,182" stroke="#9a9a9a" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+<text x="756" y="145" font-size="10.5" fill="#000000" font-weight="400" text-anchor="start">no</text>
+<rect x="20" y="278" width="470" height="96" rx="8" fill="#f6f8fa" stroke="#c9d1d9" stroke-width="1"/>
+<text x="34" y="300" font-size="12.5" fill="#000000" font-weight="700" text-anchor="start">real, from the data</text>
+<text x="34" y="320" font-size="11" fill="#000000" font-weight="400" text-anchor="start">arrival times and live scores (the edge replay), final-test outcomes,</text>
+<text x="34" y="337" font-size="11" fill="#000000" font-weight="400" text-anchor="start">where each defect arose (if recorded), the work each part went on to get</text>
+<rect x="510" y="278" width="470" height="96" rx="8" fill="#f6f8fa" stroke="#c9d1d9" stroke-width="1"/>
+<text x="524" y="300" font-size="12.5" fill="#000000" font-weight="700" text-anchor="start">assumed, from the spec (and varied by the stress-test)</text>
+<text x="524" y="320" font-size="11" fill="#000000" font-weight="400" text-anchor="start">thresholds and inspectors per shift slot (the plan), inspection time,</text>
+<text x="524" y="337" font-size="11" fill="#000000" font-weight="400" text-anchor="start">detection rate, maximum wait, and every cost</text>
+<text x="20" y="396" font-size="11" fill="#000000" font-weight="400" text-anchor="start">One GPU thread runs one scenario over every part of a window; thousands of scenarios run in one launch, on NVIDIA Warp (or the same kernel on the CPU).</text>
+</svg>

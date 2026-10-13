@@ -1,0 +1,239 @@
+{
+ "parts": 90021,
+ "failures": 2721,
+ "features": 218,
+ "folds": 5,
+ "seed": 0,
+ "split": "stratified",
+ "scored_parts": 90021,
+ "scored_failures": 2721,
+ "rounds": 200,
+ "bags": 1,
+ "device": "cuda",
+ "params": {
+  "objective": "binary:logistic",
+  "eval_metric": "auc",
+  "tree_method": "hist",
+  "eta": 0.03,
+  "max_depth": 8,
+  "min_child_weight": 2,
+  "subsample": 0.85,
+  "colsample_bytree": 0.4,
+  "colsample_bylevel": 0.8,
+  "max_bin": 256,
+  "base_score": 0.0058,
+  "seed": 0,
+  "device": "cuda"
+ },
+ "auc": 0.7686798554200435,
+ "mcc_best": 0.2120582108398781,
+ "threshold": 0.11291781067848206,
+ "mcc_best_ci95": [
+  0.19721409791474648,
+  0.22575680210883395
+ ],
+ "mcc_honest": 0.2096266925507092,
+ "fold_thresholds": [
+  0.11291781067848206,
+  0.10660777986049652,
+  0.11364621669054031,
+  0.1138170138001442,
+  0.11291781067848206
+ ],
+ "confusion": {
+  "tp": 657,
+  "fp": 2182,
+  "fn": 2064,
+  "tn": 85118
+ },
+ "per_fold": [
+  {
+   "fold": 0,
+   "n": 18005,
+   "pos": 545,
+   "auc": 0.7734024296688631,
+   "mcc_best": 0.22671708140956207,
+   "train_s": 0.8,
+   "predict_s": 0.007
+  },
+  {
+   "fold": 1,
+   "n": 18004,
+   "pos": 544,
+   "auc": 0.7847320135098713,
+   "mcc_best": 0.23498519197903805,
+   "train_s": 0.76,
+   "predict_s": 0.007
+  },
+  {
+   "fold": 2,
+   "n": 18004,
+   "pos": 544,
+   "auc": 0.7554419029209622,
+   "mcc_best": 0.22550364601612755,
+   "train_s": 0.73,
+   "predict_s": 0.007
+  },
+  {
+   "fold": 3,
+   "n": 18004,
+   "pos": 544,
+   "auc": 0.7689695143521326,
+   "mcc_best": 0.21074802300149645,
+   "train_s": 0.75,
+   "predict_s": 0.007
+  },
+  {
+   "fold": 4,
+   "n": 18004,
+   "pos": 544,
+   "auc": 0.7618685145879658,
+   "mcc_best": 0.19636649485737676,
+   "train_s": 0.76,
+   "predict_s": 0.007
+  }
+ ],
+ "train_s_total": 3.8,
+ "importance_top30": [
+  [
+   "glue-dispense.m1",
+   0.1118
+  ],
+  [
+   "stack-b.m0",
+   0.0807
+  ],
+  [
+   "busbar-weld-2.weld.photodiode.hf_max",
+   0.0268
+  ],
+  [
+   "busbar-weld-2.weld.photodiode.hf_mean",
+   0.0201
+  ],
+  [
+   "weld-vision.m2",
+   0.0177
+  ],
+  [
+   "busbar-weld-2.weld.power.mid_min",
+   0.0171
+  ],
+  [
+   "busbar-weld-2.weld.depth.mid_max",
+   0.016
+  ],
+  [
+   "glue-dispense.m2",
+   0.0126
+  ],
+  [
+   "busbar-weld-2.weld.depth.end_max",
+   0.0122
+  ],
+  [
+   "module-cover.m1",
+   0.0119
+  ],
+  [
+   "glue-dispense.m0",
+   0.0115
+  ],
+  [
+   "insulation-test.m0",
+   0.0112
+  ],
+  [
+   "ocv-sort.m2",
+   0.0111
+  ],
+  [
+   "weld-vision.m3",
+   0.011
+  ],
+  [
+   "insulation-test.m2",
+   0.011
+  ],
+  [
+   "ocv-sort.m1",
+   0.0109
+  ],
+  [
+   "plasma-clean.m3",
+   0.0108
+  ],
+  [
+   "glue-dispense.m3",
+   0.0103
+  ],
+  [
+   "busbar-weld-2.weld.depth.end_mean",
+   0.0101
+  ],
+  [
+   "bms-flash.m1",
+   0.01
+  ],
+  [
+   "bms-flash.m0",
+   0.0099
+  ],
+  [
+   "busbar-weld-2.weld.power.mid_mean",
+   0.0099
+  ],
+  [
+   "stack-b_t0",
+   0.0099
+  ],
+  [
+   "module-cover.m3",
+   0.0098
+  ],
+  [
+   "bms-flash.m2",
+   0.0097
+  ],
+  [
+   "ocv-sort.m3",
+   0.0096
+  ],
+  [
+   "weld-vision.m1",
+   0.0093
+  ],
+  [
+   "eol-test.m0",
+   0.0092
+  ],
+  [
+   "eol-test.m3",
+   0.0092
+  ],
+  [
+   "insulation-test.m3",
+   0.0091
+  ]
+ ],
+ "recipe": "offline",
+ "sample": 1.0,
+ "load_s": 0.25,
+ "features_s": 0.98,
+ "frames": "cudf",
+ "line": "battery-module",
+ "checkpoint": null,
+ "causal": false,
+ "numeric": true,
+ "versions": {
+  "xgboost": "3.4.1",
+  "cudf": "25.12.0",
+  "pandas": "2.3.3",
+  "numpy": "2.2.6",
+  "cuopt": "25.12.0",
+  "warp-lang": "1.18.0",
+  "tensorrt": "11.4.0.106",
+  "highspy": "1.15.1",
+  "gpu": "NVIDIA GeForce RTX 5090"
+ }
+}

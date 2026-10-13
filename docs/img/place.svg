@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="888.48pt" height="230.814867pt" viewBox="0 0 888.48 230.814867" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M -0 230.814867 
+L 888.48 230.814867 
+L 888.48 0 
+L -0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 206.64 189.673891 
+L 764.64 189.673891 
+L 764.64 28.897891 
+L 206.64 28.897891 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 206.64 189.673891 
+L 206.64 28.897891 
+" clip-path="url(#pa0399db16b)" style="fill: none; stroke: #e6e8eb; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_2"/>
+     <g id="text_1">
+      <text style="font-size: 12.5px; font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; text-anchor: middle" x="206.64" y="202.670961" transform="rotate(-0 206.64 202.670961)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 320.517551 189.673891 
+L 320.517551 28.897891 
+" clip-path="url(#pa0399db16b)" style="fill: none; stroke: #e6e8eb; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_4"/>
+     <g id="text_2">
+      <text style="font-size: 12.5px; font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; text-anchor: middle" x="320.517551" y="202.670961" transform="rotate(-0 320.517551 202.670961)">2000</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 434.395102 189.673891 
+L 434.395102 28.897891 
+" clip-path="url(#pa0399db16b)" style="fill: none; stroke: #e6e8eb; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_3">
+      <text style="font-size: 12.5px; font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; text-anchor: middle" x="434.395102" y="202.670961" transform="rotate(-0 434.395102 202.670961)">4000</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 548.272653 189.673891 
+L 548.272653 28.897891 
+" clip-path="url(#pa0399db16b)" style="fill: none; stroke: #e6e8eb; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_4">
+      <text style="font-size: 12.5px; font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; text-anchor: middle" x="548.272653" y="202.670961" transform="rotate(-0 548.272653 202.670961)">6000</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 662.150204 189.673891 
+L 662.150204 28.897891 
+" clip-path="url(#pa0399db16b)" style="fill: none; stroke: #e6e8eb; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_5">
+      <text style="font-size: 12.5px; font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; text-anchor: middle" x="662.150204" y="202.670961" transform="rotate(-0 662.150204 202.670961)">8000</text>
+     </g>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 12.5px; font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; text-anchor: middle" x="485.64" y="219.171938" transform="rotate(-0 485.64 219.171938)">cost per month (assumed network, outages, downtime and node cost from the line spec)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_11"/>
+     <g id="text_7">
+      <text style="font-size: 12.5px; font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" transform="translate(85.618516 163.3742)">Bosch, line-3 entry</text>
+      <text style="font-size: 12.5px; font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" transform="translate(82.817734 178.377618)">(policy never flags)</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_12"/>
+     <g id="text_8">
+      <text style="font-size: 12.5px; font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" transform="translate(56.714219 107.158815)">battery, before welding</text>
+      <text style="font-size: 12.5px; font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" transform="translate(21.641953 122.162233)">(unchecked module goes on)</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_13"/>
+     <g id="text_9">
+      <text style="font-size: 12.5px; font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" transform="translate(67.372422 50.943431)">battery, after welding</text>
+      <text style="font-size: 12.5px; font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" transform="translate(47.638047 65.946849)">(interlocked cover press)</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 206.64 51.946198 
+L 719.880799 51.946198 
+L 719.880799 36.205891 
+L 206.64 36.205891 
+z
+" clip-path="url(#pa0399db16b)" style="fill: #eb6834"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 206.64 69.935121 
+L 215.180816 69.935121 
+L 215.180816 54.194814 
+L 206.64 54.194814 
+z
+" clip-path="url(#pa0399db16b)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 206.64 108.161583 
+L 232.888779 108.161583 
+L 232.888779 92.421275 
+L 206.64 92.421275 
+z
+" clip-path="url(#pa0399db16b)" style="fill: #eb6834"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 206.64 126.150506 
+L 215.180816 126.150506 
+L 215.180816 110.410198 
+L 206.64 110.410198 
+z
+" clip-path="url(#pa0399db16b)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 206.64 164.376968 
+L 206.64 164.376968 
+L 206.64 148.63666 
+L 206.64 148.63666 
+z
+" clip-path="url(#pa0399db16b)" style="fill: #eb6834"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 206.64 182.365891 
+L 215.180816 182.365891 
+L 215.180816 166.625583 
+L 206.64 166.625583 
+z
+" clip-path="url(#pa0399db16b)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 206.64 189.673891 
+L 206.64 28.897891 
+" style="fill: none; stroke: #9a9a9a; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 206.64 189.673891 
+L 764.64 189.673891 
+" style="fill: none; stroke: #9a9a9a; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 11.5px; font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; text-anchor: start" x="723.297125" y="47.063349" transform="rotate(-0 723.297125 47.063349)">9,014</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 11.5px; font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; text-anchor: start" x="218.597143" y="65.052272" transform="rotate(-0 218.597143 65.052272)">150</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; text-anchor: start" x="775.8" y="55.798455" transform="rotate(-0 775.8 55.798455)">→ edge node</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 11.5px; font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; text-anchor: start" x="236.305105" y="103.278734" transform="rotate(-0 236.305105 103.278734)">461</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 11.5px; font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; text-anchor: start" x="218.597143" y="121.267657" transform="rotate(-0 218.597143 121.267657)">150</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; text-anchor: start" x="775.8" y="112.01384" transform="rotate(-0 775.8 112.01384)">→ edge node</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 11.5px; font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; text-anchor: start" x="210.056327" y="159.494118" transform="rotate(-0 210.056327 159.494118)">0</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 11.5px; font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; text-anchor: start" x="218.597143" y="177.483041" transform="rotate(-0 218.597143 177.483041)">150</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; text-anchor: start" x="775.8" y="168.229224" transform="rotate(-0 775.8 168.229224)">→ plant server</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 13.5px; font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; text-anchor: start" x="206.64" y="18.897891" transform="rotate(-0 206.64 18.897891)">Where should the checkpoint's model run? The cheaper placement wins</text>
+   </g>
+   <g id="legend_1">
+    <g id="patch_11">
+     <path d="M 557.870625 157.990141 
+L 581.870625 157.990141 
+L 581.870625 149.590141 
+L 557.870625 149.590141 
+z
+" style="fill: #eb6834"/>
+    </g>
+    <g id="text_20">
+     <text style="font-size: 12px; font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; text-anchor: start" x="591.470625" y="157.990141" transform="rotate(-0 591.470625 157.990141)">plant server: late decisions</text>
+    </g>
+    <g id="patch_12">
+     <path d="M 557.870625 175.991078 
+L 581.870625 175.991078 
+L 581.870625 167.591078 
+L 557.870625 167.591078 
+z
+" style="fill: #2a78d6"/>
+    </g>
+    <g id="text_21">
+     <text style="font-size: 12px; font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; text-anchor: start" x="591.470625" y="175.991078" transform="rotate(-0 591.470625 175.991078)">edge node: its cost</text>
+    </g>
+   </g>
+  </g>
+  <g id="line2d_14">
+   <path d="M 8.64 108.241891 
+L 879.84 108.241891 
+" style="fill: none; stroke: #1f77b4; stroke-opacity: 0; stroke-width: 2; stroke-linecap: round"/>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pa0399db16b">
+   <rect x="206.64" y="28.897891" width="558" height="160.776"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,35 @@
+{
+ "recipe": "l3-entry",
+ "load_s": 0.58,
+ "features_s": 60.14,
+ "frames": "cudf",
+ "line": "bosch",
+ "checkpoint": "L3_S29",
+ "causal": true,
+ "numeric": true,
+ "until": 1171.0,
+ "train_parts": 828341,
+ "features": "970 names (see runs/)",
+ "rounds": 1300,
+ "device": "cuda",
+ "fit_s": 14.4,
+ "threshold": null,
+ "versions": {
+  "xgboost": "3.4.1",
+  "cudf": "25.12.0",
+  "pandas": "2.3.3",
+  "numpy": "2.2.6",
+  "cuopt": "25.12.0",
+  "warp-lang": "1.18.0",
+  "tensorrt": "11.4.0.106",
+  "highspy": "1.15.1",
+  "gpu": "NVIDIA GeForce RTX 5090"
+ },
+ "forward": {
+  "parts": 354824,
+  "failures": 1412,
+  "auc": 0.864381732285656,
+  "mcc_best": 0.1930799836695019,
+  "threshold_best": 0.00589903537184
+ }
+}

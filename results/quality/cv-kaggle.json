@@ -1,0 +1,238 @@
+{
+ "parts": 1183747,
+ "failures": 6879,
+ "features": 1288,
+ "folds": 5,
+ "seed": 0,
+ "rounds": 1300,
+ "bags": 1,
+ "device": "cuda",
+ "params": {
+  "objective": "binary:logistic",
+  "eval_metric": "auc",
+  "tree_method": "hist",
+  "eta": 0.02,
+  "max_depth": 8,
+  "min_child_weight": 2,
+  "subsample": 0.85,
+  "colsample_bytree": 0.4,
+  "colsample_bylevel": 0.8,
+  "max_bin": 256,
+  "base_score": 0.0058,
+  "seed": 0,
+  "device": "cuda"
+ },
+ "auc": 0.9209340982421051,
+ "mcc_best": 0.48096351229627476,
+ "threshold": 0.3760850131511688,
+ "mcc_best_ci95": [
+  0.4697277782748127,
+  0.49221364420371144
+ ],
+ "mcc_honest": 0.48052895830998077,
+ "fold_thresholds": [
+  0.3751567006111145,
+  0.3760850131511688,
+  0.3760850131511688,
+  0.37627890706062317,
+  0.3760850131511688
+ ],
+ "confusion": {
+  "tp": 2008,
+  "fp": 509,
+  "fn": 4871,
+  "tn": 1176359
+ },
+ "per_fold": [
+  {
+   "fold": 0,
+   "n": 236750,
+   "pos": 1376,
+   "auc": 0.9276282015845737,
+   "mcc_best": 0.4785700628517807,
+   "train_s": 29.37,
+   "predict_s": 0.635
+  },
+  {
+   "fold": 1,
+   "n": 236750,
+   "pos": 1376,
+   "auc": 0.9237417316152562,
+   "mcc_best": 0.4704501420262014,
+   "train_s": 31.61,
+   "predict_s": 0.633
+  },
+  {
+   "fold": 2,
+   "n": 236749,
+   "pos": 1375,
+   "auc": 0.9152165366221804,
+   "mcc_best": 0.48277976991964716,
+   "train_s": 29.62,
+   "predict_s": 0.627
+  },
+  {
+   "fold": 3,
+   "n": 236749,
+   "pos": 1376,
+   "auc": 0.9143989101563584,
+   "mcc_best": 0.4920639201279744,
+   "train_s": 30.02,
+   "predict_s": 0.632
+  },
+  {
+   "fold": 4,
+   "n": 236749,
+   "pos": 1376,
+   "auc": 0.9241728557339814,
+   "mcc_best": 0.48852149495952496,
+   "train_s": 28.24,
+   "predict_s": 0.627
+  }
+ ],
+ "train_s_total": 148.9,
+ "importance_top30": [
+  [
+   "S_next_id",
+   0.1221
+  ],
+  [
+   "I_next_gap",
+   0.1142
+  ],
+  [
+   "I_next_end_gap",
+   0.0915
+  ],
+  [
+   "sig_n",
+   0.0277
+  ],
+  [
+   "st_L3_S33_grp_ysum",
+   0.0246
+  ],
+  [
+   "nbr_ysum",
+   0.0208
+  ],
+  [
+   "E_next_id",
+   0.0111
+  ],
+  [
+   "L3_n",
+   0.011
+  ],
+  [
+   "sig_grp_ysum",
+   0.0106
+  ],
+  [
+   "st_L3_S34_grp_ysum",
+   0.0093
+  ],
+  [
+   "L3_S32_t0",
+   0.009
+  ],
+  [
+   "end_grp_ysum",
+   0.0089
+  ],
+  [
+   "L3_S33_F3857",
+   0.0076
+  ],
+  [
+   "L1_S24_F1723",
+   0.0062
+  ],
+  [
+   "st_L3_S33_n",
+   0.0062
+  ],
+  [
+   "S_prev_id",
+   0.0061
+  ],
+  [
+   "L0_start",
+   0.0053
+  ],
+  [
+   "S_next_same_path",
+   0.0045
+  ],
+  [
+   "L3_S33_rel",
+   0.0044
+  ],
+  [
+   "day_grp_ysum",
+   0.0044
+  ],
+  [
+   "hour_grp_ysum",
+   0.0042
+  ],
+  [
+   "st_L3_S37_grp_ysum",
+   0.0042
+  ],
+  [
+   "E_prev_id",
+   0.004
+  ],
+  [
+   "sig_rank",
+   0.004
+  ],
+  [
+   "L3_S32_span",
+   0.004
+  ],
+  [
+   "num_dup_n",
+   0.0039
+  ],
+  [
+   "L3_S30_t0",
+   0.0037
+  ],
+  [
+   "st_L3_S30_grp_ysum",
+   0.0037
+  ],
+  [
+   "end",
+   0.0035
+  ],
+  [
+   "st_L3_S37_n",
+   0.0035
+  ]
+ ],
+ "recipe": "kaggle",
+ "config": {
+  "eta": 0.02,
+  "rounds": 1300
+ },
+ "load_s": 0.64,
+ "features_s": 46.29,
+ "frames": "cudf",
+ "checkpoint": null,
+ "causal": false,
+ "numeric": true,
+ "versions": {
+  "xgboost": "3.4.1",
+  "cudf": "25.12.0",
+  "pandas": "2.3.3",
+  "numpy": "2.2.6",
+  "cuopt": "25.12.0",
+  "warp-lang": "1.18.0",
+  "tensorrt": "11.4.0.106",
+  "highspy": "1.15.1",
+  "gpu": "NVIDIA GeForce RTX 5090"
+ }
+}

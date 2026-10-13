@@ -1,0 +1,8 @@
+[
+ {"eta": 0.02, "rounds": 1300},
+ {"max_depth": 10, "min_child_weight": 4},
+ {"colsample_bytree": 0.25},
+ {"colsample_bytree": 0.6, "colsample_bylevel": 1.0},
+ {"min_child_weight": 6, "gamma": 0.5},
+ {"scale_pos_weight": 3.0}
+]

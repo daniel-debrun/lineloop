@@ -1,0 +1,35 @@
+{
+ "recipe": "pre-weld",
+ "load_s": 0.26,
+ "features_s": 0.96,
+ "frames": "cudf",
+ "line": "battery-module",
+ "checkpoint": "busbar-weld-1",
+ "causal": true,
+ "numeric": true,
+ "until": 86830.0,
+ "train_parts": 63022,
+ "features": "132 names (see runs/)",
+ "rounds": 200,
+ "device": "cuda",
+ "fit_s": 0.7,
+ "threshold": null,
+ "versions": {
+  "xgboost": "3.4.1",
+  "cudf": "25.12.0",
+  "pandas": "2.3.3",
+  "numpy": "2.2.6",
+  "cuopt": "25.12.0",
+  "warp-lang": "1.18.0",
+  "tensorrt": "11.4.0.106",
+  "highspy": "1.15.1",
+  "gpu": "NVIDIA GeForce RTX 5090"
+ },
+ "forward": {
+  "parts": 26999,
+  "failures": 923,
+  "auc": 0.7232295771157797,
+  "mcc_best": 0.19188721770399259,
+  "threshold_best": 0.1167529746890068
+ }
+}

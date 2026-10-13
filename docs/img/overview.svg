@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" width="1000" height="420" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9a9a9a"/></marker></defs>
+<rect width="1000" height="420" fill="#ffffff"/>
+<text x="20" y="30" font-size="11" fill="#000000" font-weight="600" text-anchor="start">YOU PROVIDE</text>
+<rect x="20" y="42" width="366" height="58" rx="8" fill="#f6f8fa" stroke="#c9d1d9" stroke-width="1"/>
+<text x="34" y="64" font-size="13.5" fill="#000000" font-weight="600" text-anchor="start">line spec</text>
+<text x="34" y="86" font-size="11" fill="#000000" font-weight="400" text-anchor="start">lines/my-line.toml: stations, checkpoints, clock, costs</text>
+<rect x="400" y="42" width="366" height="58" rx="8" fill="#f6f8fa" stroke="#c9d1d9" stroke-width="1"/>
+<text x="414" y="64" font-size="13.5" fill="#000000" font-weight="600" text-anchor="start">history</text>
+<text x="414" y="86" font-size="11" fill="#000000" font-weight="400" text-anchor="start">visits · results · measurements, from any factory system</text>
+<path d="M386,71 L398,71" stroke="#9a9a9a" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+<path d="M766,71 L788,71" stroke="#9a9a9a" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+<rect x="790" y="42" width="190" height="58" rx="8" fill="#ffffff" stroke="#c9d1d9" stroke-width="1"/>
+<text x="804" y="64" font-size="13.5" fill="#000000" font-weight="600" text-anchor="start">cache</text>
+<text x="804" y="86" font-size="10.5" fill="#000000" font-weight="400" text-anchor="start">$ line ingest</text>
+<text x="20" y="138" font-size="11" fill="#000000" font-weight="600" text-anchor="start">THEN, IN THIS ORDER  (one command runs them all: demo;  numbers: the simulated battery line)</text>
+<path d="M885,100 L885,118 L110,118 L110,148" stroke="#9a9a9a" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+<rect x="20" y="150" width="180" height="214" rx="8" fill="#f6f8fa" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="20" y="150" width="180" height="4" rx="2" fill="#2a78d6"/>
+<circle cx="44" cy="182" r="12" fill="#d6e6fa" stroke="#2a78d6"/>
+<text x="44" y="186.5" font-size="12.5" fill="#000000" font-weight="700" text-anchor="middle">1</text>
+<text x="64" y="187" font-size="15" fill="#000000" font-weight="700" text-anchor="start">Predict</text>
+<text x="34" y="218" font-size="11.5" fill="#000000" font-weight="400" text-anchor="start">learn which parts fail, from</text>
+<text x="34" y="235" font-size="11.5" fill="#000000" font-weight="400" text-anchor="start">route, timing, measurements</text>
+<text x="34" y="252" font-size="11.5" fill="#000000" font-weight="400" text-anchor="start">and the parts around them</text>
+<line x1="34" y1="278" x2="186" y2="278" stroke="#c9d1d9"/>
+<text x="34" y="298" font-size="11" fill="#000000" font-weight="600" text-anchor="start">XGBoost on cuDF features</text>
+<text x="34" y="316" font-size="10.5" fill="#000000" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">$ quality fit</text>
+<text x="34" y="344" font-size="12.5" fill="#000000" font-weight="700" text-anchor="start">AUC 0.76 after welding</text>
+<rect x="215" y="150" width="180" height="214" rx="8" fill="#f6f8fa" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="215" y="150" width="180" height="4" rx="2" fill="#2a78d6"/>
+<circle cx="239" cy="182" r="12" fill="#d6e6fa" stroke="#2a78d6"/>
+<text x="239" y="186.5" font-size="12.5" fill="#000000" font-weight="700" text-anchor="middle">2</text>
+<text x="259" y="187" font-size="15" fill="#000000" font-weight="700" text-anchor="start">Score live</text>
+<text x="229" y="218" font-size="11.5" fill="#000000" font-weight="400" text-anchor="start">compiles the model and its</text>
+<text x="229" y="235" font-size="11.5" fill="#000000" font-weight="400" text-anchor="start">signal stage; an edge node</text>
+<text x="229" y="252" font-size="11.5" fill="#000000" font-weight="400" text-anchor="start">scores each part on arrival</text>
+<line x1="229" y1="278" x2="381" y2="278" stroke="#c9d1d9"/>
+<text x="229" y="298" font-size="11" fill="#000000" font-weight="600" text-anchor="start">TensorRT · ONNX Runtime</text>
+<text x="229" y="316" font-size="10.5" fill="#000000" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">$ edge compile, replay</text>
+<text x="229" y="344" font-size="12.5" fill="#000000" font-weight="700" text-anchor="start">signals add +0.036 AUC</text>
+<path d="M200,182 L213,182" stroke="#9a9a9a" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+<rect x="410" y="150" width="180" height="214" rx="8" fill="#f6f8fa" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="410" y="150" width="180" height="4" rx="2" fill="#2a78d6"/>
+<circle cx="434" cy="182" r="12" fill="#d6e6fa" stroke="#2a78d6"/>
+<text x="434" y="186.5" font-size="12.5" fill="#000000" font-weight="700" text-anchor="middle">3</text>
+<text x="454" y="187" font-size="15" fill="#000000" font-weight="700" text-anchor="start">Decide</text>
+<text x="424" y="218" font-size="11.5" fill="#000000" font-weight="400" text-anchor="start">a MILP picks thresholds and</text>
+<text x="424" y="235" font-size="11.5" fill="#000000" font-weight="400" text-anchor="start">staffing; the Warp twin</text>
+<text x="424" y="252" font-size="11.5" fill="#000000" font-weight="400" text-anchor="start">checks every plan</text>
+<line x1="424" y1="278" x2="576" y2="278" stroke="#c9d1d9"/>
+<text x="424" y="298" font-size="11" fill="#000000" font-weight="600" text-anchor="start">cuOpt · HiGHS + Warp</text>
+<text x="424" y="316" font-size="10.5" fill="#000000" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">$ plan</text>
+<text x="424" y="344" font-size="12.5" fill="#000000" font-weight="700" text-anchor="start">saves 64.6k / week</text>
+<path d="M395,182 L408,182" stroke="#9a9a9a" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+<rect x="605" y="150" width="180" height="214" rx="8" fill="#f6f8fa" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="605" y="150" width="180" height="4" rx="2" fill="#2a78d6"/>
+<circle cx="629" cy="182" r="12" fill="#d6e6fa" stroke="#2a78d6"/>
+<text x="629" y="186.5" font-size="12.5" fill="#000000" font-weight="700" text-anchor="middle">4</text>
+<text x="649" y="187" font-size="15" fill="#000000" font-weight="700" text-anchor="start">Stress-test</text>
+<text x="619" y="218" font-size="11.5" fill="#000000" font-weight="400" text-anchor="start">the twin replays the plan</text>
+<text x="619" y="235" font-size="11.5" fill="#000000" font-weight="400" text-anchor="start">under thousands of drawn</text>
+<text x="619" y="252" font-size="11.5" fill="#000000" font-weight="400" text-anchor="start">costs and cell parameters</text>
+<line x1="619" y1="278" x2="771" y2="278" stroke="#c9d1d9"/>
+<text x="619" y="298" font-size="11" fill="#000000" font-weight="600" text-anchor="start">Warp (GPU or CPU)</text>
+<text x="619" y="316" font-size="10.5" fill="#000000" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">$ twin</text>
+<text x="619" y="344" font-size="12.5" fill="#000000" font-weight="700" text-anchor="start">saves in 98% of 8,192</text>
+<path d="M590,182 L603,182" stroke="#9a9a9a" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+<rect x="800" y="150" width="180" height="214" rx="8" fill="#f6f8fa" stroke="#c9d1d9" stroke-width="1"/>
+<rect x="800" y="150" width="180" height="4" rx="2" fill="#2a78d6"/>
+<circle cx="824" cy="182" r="12" fill="#d6e6fa" stroke="#2a78d6"/>
+<text x="824" y="186.5" font-size="12.5" fill="#000000" font-weight="700" text-anchor="middle">5</text>
+<text x="844" y="187" font-size="15" fill="#000000" font-weight="700" text-anchor="start">Place</text>
+<text x="814" y="218" font-size="11.5" fill="#000000" font-weight="400" text-anchor="start">server or edge node? from</text>
+<text x="814" y="235" font-size="11.5" fill="#000000" font-weight="400" text-anchor="start">the deadline, the network</text>
+<text x="814" y="252" font-size="11.5" fill="#000000" font-weight="400" text-anchor="start">and a late decision's cost</text>
+<line x1="814" y1="278" x2="966" y2="278" stroke="#c9d1d9"/>
+<text x="814" y="298" font-size="11" fill="#000000" font-weight="600" text-anchor="start">measured, then priced</text>
+<text x="814" y="316" font-size="10.5" fill="#000000" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">$ place</text>
+<text x="814" y="344" font-size="12.5" fill="#000000" font-weight="700" text-anchor="start">edge: 150 vs 9,014/mo</text>
+<path d="M785,182 L798,182" stroke="#9a9a9a" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+<text x="20" y="390" font-size="11" fill="#000000" font-weight="400" text-anchor="start">Every step prints a scoreboard and writes JSON: every number in these docs is program output (results/).</text>
+<text x="20" y="408" font-size="11" fill="#000000" font-weight="400" text-anchor="start">Each step runs on an NVIDIA library, or on a CPU with the same results.</text>
+</svg>

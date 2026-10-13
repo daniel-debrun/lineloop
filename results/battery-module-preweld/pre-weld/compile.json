@@ -1,0 +1,13 @@
+{
+ "trees": 200,
+ "depth": 8,
+ "features": 132,
+ "base_margin": -5.144080476108199,
+ "onnx_bytes": 669667,
+ "feature_names": "132 names (see runs/)",
+ "signal": null,
+ "max_abs_diff_ort-cpu": 4.172325134277344e-07,
+ "share_above_1e-4_ort-cpu": 0.0,
+ "max_abs_diff_trt": 4.470348358154297e-07,
+ "share_above_1e-4_trt": 0.0
+}

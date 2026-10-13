@@ -1,0 +1,58 @@
+# A simulated line shaped like the Bosch data (same file layout, station names and clock), so the Bosch pipeline
+# runs end to end without the Kaggle files. Not fitted to Bosch: a fixture with the same kind of structure.
+#   python -m lineloop demo --line bosch-synthetic
+
+name = "bosch-synthetic"
+description = "Simulated Bosch-shaped line: 4 lines, 20 stations, Kaggle file layout"
+
+[data]
+format = "bosch"                  # written and read as the Kaggle wide CSVs, so the Bosch adapter is exercised too
+source = "data/sim/bosch-synthetic"
+cache = "data/cache/bosch-synthetic"
+
+[[segment]]
+name = "L0"
+stations = ["L0_S0", "L0_S1", "L0_S2", "L0_S3", "L0_S4", "L0_S5"]
+
+[[segment]]
+name = "L1"
+stations = ["L1_S24", "L1_S25"]
+
+[[segment]]
+name = "L2"
+stations = ["L2_S26", "L2_S27", "L2_S28"]
+
+[[segment]]
+name = "L3"
+stations = ["L3_S29", "L3_S30", "L3_S31", "L3_S32", "L3_S33", "L3_S34", "L3_S35", "L3_S36", "L3_S37"]
+
+[time]
+unit_hours = 10.0
+resolution = 0.01
+
+[checkpoints]
+l3-entry = "L3_S29"
+
+[shifts]
+hours = 8
+
+[simulate]
+parts = 150000
+parts_per_week = 20000
+labelled_share = 0.5              # like Kaggle: half the parts are a test set with no result
+fail_rate = 0.02                  # the expected share of parts that fail
+measurement_names = "F{j}"        # the bosch format needs measurement columns named F<n>
+parallel = [["L0_S2", "L0_S3"], ["L0_S4", "L0_S5"], ["L1_S24", "L1_S25"], ["L2_S26", "L2_S27"],
+            ["L3_S35", "L3_S36"]]
+route = [
+  { share = 0.55, segments = ["L0", "L3"] },
+  { share = 0.25, segments = ["L1", "L2", "L3"], risk = 0.6 },
+  { share = 0.12, segments = ["L0", "L2", "L3"] },
+  { share = 0.08, segments = ["L1", "L3"] },
+]
+driver = [
+  { station = "L0_S4", measurement = 1, weight = -28.0 },     # visible before line 3
+  { station = "L1_S25", measurement = 2, weight = 20.0 },
+  { station = "L2_S27", measurement = 2, weight = 20.0 },
+  { station = "L3_S32", measurement = 0, weight = 24.0 },     # in line 3: only the end-of-line model sees it
+]

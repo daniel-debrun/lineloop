@@ -1,0 +1,139 @@
+{
+ "line": "bosch",
+ "checkpoint": "l3-entry",
+ "window": "hold-out",
+ "parts": 177344,
+ "scenarios_per_policy": 8192,
+ "ranges": {
+  "value_per_defect": [
+   0.33,
+   3.0
+  ],
+  "value_per_station": [
+   0.5,
+   2.0
+  ],
+  "handling": [
+   0.5,
+   2.0
+  ],
+  "inspector_hour": [
+   0.7,
+   1.5
+  ],
+  "wait_hour": [
+   0.5,
+   2.0
+  ],
+  "svc_mean_h": [
+   0.6,
+   2.0
+  ],
+  "svc_cv": [
+   0.5,
+   2.0
+  ],
+  "detect": [
+   0.67,
+   1.1
+  ],
+  "max_wait_h": [
+   0.5,
+   2.0
+  ]
+ },
+ "robustness": {
+  "best constant policy (none)": {
+   "scenarios": 8192,
+   "saves_share": 0.0,
+   "net_median": 0.0,
+   "net_p05": 0.0,
+   "net_p95": 0.0,
+   "break_even_value_per_defect_median": null,
+   "caught_per_week_median": 0.0,
+   "sensitivity": {
+    "value_per_defect": -0.0049028733413512575,
+    "value_per_station": 0.0017461680587159364,
+    "handling": -0.004878878025861503,
+    "inspector_hour": -0.0021322791243940276,
+    "wait_hour": 0.005857452313619887,
+    "svc_mean_h": -0.010716967531686165,
+    "svc_cv": -0.005309916005897015,
+    "detect": 0.0004877248138572062,
+    "max_wait_h": 0.011347960616990338
+   }
+  },
+  "best per-family policy (greedy search in the twin)": {
+   "scenarios": 8192,
+   "saves_share": 0.0,
+   "net_median": 7509.484902869156,
+   "net_p05": 5264.057230505396,
+   "net_p95": 10699.888291487872,
+   "break_even_value_per_defect_median": 4809.30976181222,
+   "caught_per_week_median": 1.635672856277336,
+   "sensitivity": {
+    "value_per_defect": -0.10071109848108849,
+    "value_per_station": -0.01706545020679217,
+    "handling": 0.04034541272723731,
+    "inspector_hour": 0.9922808905771762,
+    "wait_hour": -0.015491271229447183,
+    "svc_mean_h": 0.023553827699202806,
+    "svc_cv": 0.008339082095178602,
+    "detect": -0.038063385618107085,
+    "max_wait_h": -0.011878801919576555
+   }
+  },
+  "optimised (MILP + twin)": {
+   "scenarios": 8192,
+   "saves_share": 0.0,
+   "net_median": 0.0,
+   "net_p05": 0.0,
+   "net_p95": 0.0,
+   "break_even_value_per_defect_median": null,
+   "caught_per_week_median": 0.0,
+   "sensitivity": {
+    "value_per_defect": -0.0049028733413512575,
+    "value_per_station": 0.0017461680587159364,
+    "handling": -0.004878878025861503,
+    "inspector_hour": -0.0021322791243940276,
+    "wait_hour": 0.005857452313619887,
+    "svc_mean_h": -0.010716967531686165,
+    "svc_cv": -0.005309916005897015,
+    "detect": 0.0004877248138572062,
+    "max_wait_h": 0.011347960616990338
+   }
+  }
+ },
+ "devices": {
+  "GPU (cuda:0)": {
+   "scenarios": 1442339,
+   "seconds": 1.18524758098647,
+   "part_steps_per_s": 215811592210.2185
+  },
+  "CPU, 1 core": {
+   "scenarios": 8448,
+   "seconds": 4.806842165067792,
+   "part_steps_per_s": 311681153.7702883
+  },
+  "CPU, 8 processes": {
+   "scenarios": 8448,
+   "seconds": 1.2622717479243875,
+   "part_steps_per_s": 1186909327.9347842
+  },
+  "speedup": {
+   "CPU, 1 core": 692.4114262271806,
+   "CPU, 8 processes": 181.82651962617018
+  }
+ },
+ "versions": {
+  "xgboost": "3.4.1",
+  "cudf": "25.12.0",
+  "pandas": "2.3.3",
+  "numpy": "2.2.6",
+  "cuopt": "25.12.0",
+  "warp-lang": "1.18.0",
+  "tensorrt": "11.4.0.106",
+  "highspy": "1.15.1",
+  "gpu": "NVIDIA GeForce RTX 5090"
+ }
+}

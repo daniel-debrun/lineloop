@@ -1,0 +1,113 @@
+{
+ "line": "bosch",
+ "checkpoint": "l3-entry",
+ "time_limit": 120.0,
+ "sizes": [
+  {
+   "lines": 1,
+   "variables": 1932,
+   "rows": 350,
+   "solvers": {
+    "cuopt": {
+     "status": "optimal",
+     "objective": 0.0,
+     "seconds": 0.7115012626163661,
+     "gap_to_best": 0.0
+    },
+    "highs": {
+     "status": "optimal",
+     "objective": 0.0,
+     "seconds": 0.15079684183001518,
+     "gap_to_best": 0.0
+    }
+   }
+  },
+  {
+   "lines": 4,
+   "variables": 7665,
+   "rows": 791,
+   "solvers": {
+    "cuopt": {
+     "status": "feasible",
+     "objective": -375.69215751204285,
+     "seconds": 120.2832125783898,
+     "gap_to_best": 0.13109875194980194
+    },
+    "highs": {
+     "status": "optimal",
+     "objective": -432.3761283058238,
+     "seconds": 85.6231627818197,
+     "gap_to_best": 0.0
+    }
+   }
+  },
+  {
+   "lines": 16,
+   "variables": 30597,
+   "rows": 2555,
+   "solvers": {
+    "cuopt": {
+     "status": "feasible",
+     "objective": -2594.2276990795435,
+     "seconds": 120.31694113835692,
+     "gap_to_best": 0.26620411869460336
+    },
+    "highs": {
+     "status": "feasible",
+     "objective": -3535.353311692763,
+     "seconds": 120.04798067174852,
+     "gap_to_best": 0.0
+    }
+   }
+  },
+  {
+   "lines": 64,
+   "variables": 122325,
+   "rows": 9611,
+   "solvers": {
+    "cuopt": {
+     "status": "feasible",
+     "objective": -14226.4290568113,
+     "seconds": 120.36781252361834,
+     "gap_to_best": 0.07953608869714938
+    },
+    "highs": {
+     "status": "feasible",
+     "objective": -15455.71627753967,
+     "seconds": 120.1508916169405,
+     "gap_to_best": 0.0
+    }
+   }
+  },
+  {
+   "lines": 256,
+   "variables": 489237,
+   "rows": 37835,
+   "solvers": {
+    "cuopt": {
+     "status": "feasible",
+     "objective": -61450.527196949464,
+     "seconds": 121.00508472789079,
+     "gap_to_best": 0.0
+    },
+    "highs": {
+     "status": "feasible",
+     "objective": -60127.14867270362,
+     "seconds": 382.784058845602,
+     "gap_to_best": 0.021535674055397566
+    }
+   }
+  }
+ ],
+ "versions": {
+  "xgboost": "3.4.1",
+  "cudf": "25.12.0",
+  "pandas": "2.3.3",
+  "numpy": "2.2.6",
+  "cuopt": "25.12.0",
+  "warp-lang": "1.18.0",
+  "tensorrt": "11.4.0.106",
+  "highspy": "1.15.1",
+  "gpu": "NVIDIA GeForce RTX 5090"
+ }
+}

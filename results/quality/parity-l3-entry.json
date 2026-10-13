@@ -1,0 +1,36 @@
+{
+ "recipe": "l3-entry",
+ "same_columns": true,
+ "cells": 1148234590,
+ "nan_mismatch": 0,
+ "max_abs_diff": 0.0,
+ "worst_columns": [],
+ "nan_mismatch_columns": [],
+ "pandas": {
+  "load_s": 4.77,
+  "features_s": 114.07,
+  "frames": "pandas",
+  "checkpoint": 29,
+  "causal": true,
+  "numeric": true
+ },
+ "cudf": {
+  "load_s": 1.19,
+  "features_s": 60.1,
+  "frames": "cudf",
+  "checkpoint": 29,
+  "causal": true,
+  "numeric": true
+ },
+ "versions": {
+  "xgboost": "3.4.1",
+  "cudf": "25.12.0",
+  "pandas": "2.3.3",
+  "numpy": "2.2.6",
+  "cuopt": "25.12.0",
+  "warp-lang": "1.18.0",
+  "tensorrt": "11.4.0.106",
+  "highspy": "1.15.1",
+  "gpu": "NVIDIA GeForce RTX 5090"
+ }
+}

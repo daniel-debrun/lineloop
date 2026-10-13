@@ -1,0 +1,79 @@
+{
+ "line": "battery-module",
+ "checkpoint": "post-weld",
+ "verdict": "edge",
+ "reasons": [
+  "outages: the line stops while the network is down, 9,014 / month"
+ ],
+ "placements": {
+  "server": {
+   "p50_s": 0.11989621259272099,
+   "p99_s": 0.18231108299456547,
+   "max_s": 10674.553839247674,
+   "late_share": 0.001394652201446522,
+   "late_per_month": 46.709058855652174,
+   "miss_cost_per_month": 9013.906503585153,
+   "upstream_mb_per_day": 161.5766162412996,
+   "uplink_utilisation": 0.0014960797800120332,
+   "cost_per_month": 9013.906503585153
+  },
+  "edge": {
+   "p50_s": 0.00011888612061738968,
+   "p99_s": 0.00012520793825387955,
+   "max_s": 0.00012999679893255234,
+   "late_share": 0.0,
+   "late_per_month": 0.0,
+   "miss_cost_per_month": 0.0,
+   "upstream_mb_per_day": 0.835055889150237,
+   "uplink_utilisation": 0.0,
+   "cost_per_month": 150.0
+  }
+ },
+ "months": 0.895838002844636,
+ "parts": 30003,
+ "run_share": 1.001545167065017,
+ "value_per_part": 8.266964157357927,
+ "config": {
+  "deadline_s": 30.0,
+  "uplink_mbps": 10.0,
+  "rtt_ms": [
+   4.0,
+   60.0
+  ],
+  "outages_per_month": 2.0,
+  "outage_minutes": 30.0,
+  "undecided": "stop",
+  "downtime_per_hour": 9000.0,
+  "edge_cost_per_month": 150.0,
+  "record_bytes": null
+ },
+ "server_bytes": 144732,
+ "edge_up_bytes": 748,
+ "signal": "weld",
+ "compute": {
+  "server (trt)": {
+   "p50_ms": 0.08589285425841808,
+   "p99_ms": 0.09712329134345055
+  },
+  "edge, 1 CPU core (ort-cpu)": {
+   "p50_ms": 0.11889101006090641,
+   "p99_ms": 0.12522167060524225
+  },
+  "edge, NVIDIA GPU (trt)": {
+   "p50_ms": 0.08589285425841808,
+   "p99_ms": 0.09712329134345055
+  }
+ },
+ "busiest_minute_parts_per_s": 0.13333333333333333,
+ "versions": {
+  "xgboost": "3.4.1",
+  "cudf": "25.12.0",
+  "pandas": "2.3.3",
+  "numpy": "2.2.6",
+  "cuopt": "25.12.0",
+  "warp-lang": "1.18.0",
+  "tensorrt": "11.4.0.106",
+  "highspy": "1.15.1",
+  "gpu": "NVIDIA GeForce RTX 5090"
+ }
+}

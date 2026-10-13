@@ -1,0 +1,112 @@
+# An EV battery-module assembly line (simulated): cells are sorted, cleaned, glued and stacked, the busbars are
+# laser-welded (24 welds a module), the cover is closed, and the module is tested. A failure found at the
+# end-of-line test means scrapping a closed module, so the question is which modules to pull for inspection
+# while they can still be repaired: after welding, before the cover closes.
+#
+# The welders record each weld's laser power, photodiode (spatter) and penetration depth: 144 kB a module that the
+# factory system never stores. A weld can fail inside (lack of fusion) where the weld camera cannot see it, so
+# the post-weld model needs those raw signals: only an edge node at the cell has them. `lineloop place` checks
+# whether that is reason enough to run it there.
+#
+# This line shares nothing with Bosch: its own station names, a minute clock, 12-hour shifts, string serial
+# numbers and the generic events data format.
+#   python -m lineloop demo --line battery-module
+
+name = "battery-module"
+description = "EV battery-module assembly: cell prep, stacking, laser welding, electrical test (simulated)"
+
+[data]
+format = "events"                 # visits / results / measurements tables (parquet or csv)
+source = "data/sim/battery-module"
+cache = "data/cache/battery-module"
+
+[[segment]]
+name = "cell-prep"
+stations = ["ocv-sort", "plasma-clean", "glue-dispense", "stack-a", "stack-b"]
+
+[[segment]]
+name = "welding"
+stations = ["busbar-weld-1", "busbar-weld-2", "weld-vision"]
+
+[[segment]]
+name = "closing"
+stations = ["module-cover"]
+
+[[segment]]
+name = "test"
+stations = ["insulation-test", "bms-flash", "eol-test"]
+
+[time]
+unit_hours = 0.016666666666666666   # the clock counts minutes
+resolution = 1.0                    # one-minute steps
+
+[checkpoints]                       # the demo runs the first one
+post-weld = "module-cover"          # score each module after welding, before its cover closes (repair is possible)
+pre-weld = "busbar-weld-1"          # or earlier, as it reaches a welder (either one): before the welds exist
+pre-test = "insulation-test"        # or before the electrical tests
+
+[[signal]]                          # what the welders record and the factory system does not keep
+name = "weld"
+stations = ["busbar-weld-1", "busbar-weld-2"]
+channels = ["power", "photodiode", "depth"]
+rate_hz = 20000
+samples = 500                       # 25 ms per weld
+per_part = 24                       # welds per module
+
+[families]                          # the inspection policy may treat modules from each stacker differently
+stacker-a = ["stack-a", "stack-a"]
+stacker-b = ["stack-b", "stack-b"]
+
+[shifts]
+hours = 12                          # two 12-hour shifts a day: 14 shift slots a week
+
+[economics]                         # at the demo's checkpoint (post-weld); [economics.<checkpoint>] overrides
+value_per_defect = 700.0            # a bad weld found before the cover closes is repaired; after, the module is scrapped
+value_per_station = 25.0            # each station after the checkpoint not spent on a module that will fail
+inspector_hour = 55.0
+svc_mean_h = 0.2                    # a 12-minute inspection
+max_wait_h = 1.0
+
+[economics.pre-weld]
+value_per_defect = 900.0            # a bad cell stack caught before welding is reworked, not welded and scrapped
+
+[edge.post-weld]                    # lineloop place: where should this checkpoint's model run?
+deadline_s = 30.0                   # a flagged module must be pulled before the cover press takes it
+uplink_mbps = 10.0                  # the cell's share of the plant network to a server
+rtt_ms = [4.0, 60.0]                # round trip to the server: median and 99th percentile
+outages_per_month = 2.0             # plant-network outages and maintenance windows the cell must ride through
+outage_minutes = 30.0
+undecided = "stop"                  # the cover press is interlocked: no decision, no closing, the line waits
+downtime_per_hour = 9000.0          # an hour of the stopped line
+edge_cost_per_month = 150.0         # an edge node at the cell: hardware over three years, power, upkeep
+
+[edge.pre-weld]
+deadline_s = 10.0                   # before the welder clamps the module
+uplink_mbps = 10.0
+rtt_ms = [4.0, 60.0]
+outages_per_month = 2.0
+outage_minutes = 30.0
+undecided = "pass"                  # an unchecked module is welded, as it is today
+edge_cost_per_month = 150.0
+
+[simulate]
+parts = 100000
+parts_per_week = 8000
+batch = [1, 4]
+step_hours = 0.2
+fail_rate = 0.03                    # the expected share of modules that fail the end-of-line test
+labelled_share = 0.9                # a few modules shipped without a stored test record
+measurements_per_station = 4
+id_prefix = "MOD-"                  # serial numbers are strings
+parallel = [["stack-a", "stack-b"], ["busbar-weld-1", "busbar-weld-2"]]
+drift = [
+  { station = "stack-b", measurement = 0, per_week = 0.01 },       # stacker B wears: its offset grows every week
+]
+signal_driver = [                   # a weld fails inside (lack of fusion) when its quality z is well below spec
+  { signal = "weld", weight = 4.0, above = 2.25, bad_shift = 0.5 },
+]
+driver = [
+  { station = "glue-dispense", measurement = 1, weight = 20.0 },   # glue bead width: visible before welding
+  { station = "stack-b", measurement = 0, weight = 16.0 },         # stacker B drifts
+  { station = "weld-vision", measurement = 2, weight = 12.0 },    # weld seam surface: the camera sees it
+]

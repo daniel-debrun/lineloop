@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lineloop"
+version = "0.3.0"
+description = "A framework for production lines: describe a line in a small spec, then predict failing parts, score them live on an edge node, simulate an inspection cell and optimise it, on NVIDIA libraries with CPU fallbacks"
+readme = "README.md"
+license = "Apache-2.0"
+authors = [{ name = "Daniel De Brun" }]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "pyarrow>=15",
+    "scipy>=1.11",
+    "scikit-learn>=1.4",
+    "xgboost>=2.1",
+    "onnx>=1.16",
+    "onnxruntime>=1.18",
+    "warp-lang>=1.5",
+    "highspy>=1.7",
+    "rich>=13",
+    "tomli>=2; python_version < '3.11'",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.5"]
+# the README's figures (tools/figures.py)
+docs = ["matplotlib>=3.8"]
+# NVIDIA GPU (x86_64, CUDA 12.8+ for Blackwell): pip install -e ".[gpu]" --extra-index-url https://pypi.nvidia.com
+# The exact set that ran on the RTX 5090 is pinned in deploy/requirements-gpu.txt.
+gpu = ["cudf-cu12>=25.10", "cuml-cu12>=25.10", "cuopt-cu12>=25.10", "cupy-cuda12x>=13", "tensorrt-cu12>=10.8"]
+
+[project.scripts]
+lineloop = "lineloop.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["lineloop*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["gpu: needs an NVIDIA GPU with the [gpu] extra"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "W"]
+ignore = ["E731"]

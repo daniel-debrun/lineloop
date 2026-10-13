@@ -1,0 +1,28 @@
+{
+ "source": "kaggle competitions leaderboard bosch-production-line-performance --download (public leaderboard)",
+ "downloaded": "2026-10-08",
+ "teams": 1371,
+ "metric": "MCC",
+ "note": "Public leaderboard only (the CLI does not serve the private one). Medal ranks use Kaggle's rule for 1000+ teams: gold top 10 + 0.2 %, silver top 5 %, bronze top 10 %; medals were awarded on the private leaderboard, so these are public-board scores at those ranks.",
+ "at_rank": {
+  "1": 0.52491,
+  "2": 0.52448,
+  "3": 0.5191,
+  "5": 0.51685,
+  "10": 0.51161,
+  "12": 0.50934,
+  "25": 0.49512,
+  "50": 0.47958,
+  "68": 0.47113,
+  "100": 0.45405,
+  "137": 0.43972,
+  "200": 0.42599,
+  "500": 0.37274,
+  "685": 0.23366
+ },
+ "medal_ranks": {
+  "gold": 12,
+  "silver": 68,
+  "bronze": 137
+ }
+}
